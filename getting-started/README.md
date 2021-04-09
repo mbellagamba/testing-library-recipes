@@ -168,12 +168,24 @@ It instructs Jest with Testing Library custom matchers.
 Create the file _<rootDir>/test/config/cssTransform.js_.
 
 ```javascript
+"use strict";
 
+module.exports = {
+  process() {
+    return "module.exports = {};";
+  },
+  getCacheKey() {
+    // The output is always the same.
+    return "cssTransform";
+  },
+};
 ```
 
 This is a custom Jest transformer turning style imports into empty objects. In our tests, we does not need to import real CSS files.
 
 #### File transform
+
+Create the file _<rootDir>/test/config/fileTransform.js_.
 
 ```javascript
 "use strict";
@@ -354,6 +366,8 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
 ```
+
+**Remember to replace `$default-branch` with the name of your default branch (es. `main` / `master`).**
 
 This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node. For more information see [Using Node.js with GitHub Actions](https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions).
 This template will fit most use cases, but you can customize the CI process depending on your needs. You can read more on this directly on [Github Actions Docs](https://docs.github.com/en/actions).
