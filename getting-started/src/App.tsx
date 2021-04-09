@@ -7,7 +7,7 @@ export default function App(): JSX.Element {
   return (
     <div className="app">
       <header>
-        <h1>Testing Library Recipes - Getting Started</h1>
+        <h1>Testing Library Recipes Getting Started</h1>
       </header>
       <main>
         <div>
