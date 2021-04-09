@@ -1,0 +1,36 @@
+.app {
+  background-color: hsl(254, 60%, 19%);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app img {
+  margin: 2.5rem;
+}
+
+.app a {
+  text-decoration: none;
+  color: hsl(158deg 100% 79%);
+}
+
+.app a:hover {
+  text-decoration: underline;
+  color: hsl(158deg 100% 89%);
+}
+
+.app a:focus {
+  text-decoration: underline;
+  color: hsl(158deg 50% 79%);
+}
+
+.app a:visited {
+  color: hsl(198deg 100% 79%);
+}
+
+.app footer {
+  font-size: 1.5rem;
+}
