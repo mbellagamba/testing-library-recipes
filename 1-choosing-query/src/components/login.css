@@ -1,0 +1,54 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  max-width: 60vw;
+  margin: auto;
+  text-align: start;
+}
+
+@media screen and (max-width: 600px) {
+  .loginform {
+    max-width: initial;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
+}
+
+.loginform__info {
+  text-align: center;
+}
+
+.loginform__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginform__input {
+  padding: var(--space-s);
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-m);
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  outline-color: var(--primary);
+}
+
+.loginform__submit {
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--on-primary);
+  background-color: var(--primary);
+  line-height: 2rem;
+  cursor: pointer;
+}
+.loginform__submit:hover,
+.loginform__submit:active {
+  background-color: var(--primary-dark);
+}
+
+.loginform__alert {
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: var(--space-s);
+  color: var(--primary);
+  margin-top: var(--space-m);
+}
